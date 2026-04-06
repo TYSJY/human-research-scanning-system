@@ -8,7 +8,7 @@ from typing import Any
 from .common import append_jsonl, coerce_str_list, ensure_dir, load_json, now_iso, read_text, save_json, write_text
 
 
-CURRENT_VERSION = "0.6.5"
+CURRENT_VERSION = "0.6.6"
 DEFAULT_RUNTIME_BUDGET = {
     "max_concurrent_runs": 1,
     "lease_ttl_sec": 30,

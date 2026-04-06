@@ -1,73 +1,65 @@
 # GitHub README media guide
 
-这个仓库现在自带一套可以直接用于 GitHub 首页展示的视觉资产，不需要等 UI 完整重构后再补图。
+这个仓库已经是公开仓库，所以 README 应该直接接入 **真实仓库信号**，而不是继续停留在“上线前占位”状态。
 
-## 已内置的图片资产
+## 当前仓库
 
-### README 展示图
-- `docs/assets/hero-banner.png`
-- `docs/assets/showcase-view.png`
-- `docs/assets/research-flow.png`
-- `docs/assets/evidence-traceability.png`
-- `docs/assets/github-growth-panel.png`
+- Repository: `TYSJY/human-research-scanning-system`
+- Product name: `Research OS`
+- README 主图：`docs/assets/hero-banner.png`
+- Social preview：`.github/assets/social-preview.png`
 
-### 社交分享图
-- `.github/assets/social-preview.png`
+## README 现在应该怎么展示
 
-## 这些图片分别用来做什么
-
-- `hero-banner.png`：README 首屏主图
-- `showcase-view.png`：展示工作区 + 成果物的整体视图
-- `research-flow.png`：解释研究流程闭环
-- `evidence-traceability.png`：解释“结论如何回到证据”
-- `github-growth-panel.png`：在仓库还没上线前，先占住 badge / star trend / social preview 的视觉位置
-- `social-preview.png`：推到 GitHub 后可直接在仓库设置中作为 social preview 图使用
-
-## README 中使用本地图
-
-GitHub 支持在 Markdown 中通过相对路径引用仓库内图片，所以推荐直接这样写：
-
-```md
-<p align="center">
-  <img src="docs/assets/hero-banner.png" alt="Research OS hero banner" width="100%">
-</p>
-```
-
-## 仓库公开后打开 live badge
-
-把下面的 `<OWNER>/<REPO>` 替换成你真实的 GitHub 仓库名。
-
-### GitHub stars badge
-
-```md
-[![GitHub stars](https://img.shields.io/github/stars/<OWNER>/<REPO>?style=for-the-badge&logo=github)](https://github.com/<OWNER>/<REPO>/stargazers)
-```
-
-### GitHub release badge
-
-```md
-[![GitHub release](https://img.shields.io/github/v/release/<OWNER>/<REPO>?style=for-the-badge)](https://github.com/<OWNER>/<REPO>/releases)
-```
-
-### Live star history chart
-
-```md
-[![Star History Chart](https://api.star-history.com/svg?repos=<OWNER>/<REPO>&type=Date)](https://www.star-history.com/#<OWNER>/<REPO>&Date)
-```
-
-## 推荐的主页结构
+推荐顺序：
 
 1. Hero banner
 2. 一句话定位
-3. Visual tour
-4. 核心能力
-5. Quickstart
-6. 官方样例与成果物示例
-7. 开发/测试/贡献
+3. 实时 badges（CI / stars / release / license）
+4. Visual tour
+5. Install / Quickstart
+6. Live GitHub signals（Star History 图）
+7. 样例与文档入口
+
+## 这个仓库可以直接用的 snippet
+
+### CI badge
+
+```md
+[![CI](https://github.com/TYSJY/human-research-scanning-system/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/TYSJY/human-research-scanning-system/actions/workflows/ci.yml)
+```
+
+### Stars badge
+
+```md
+[![GitHub stars](https://img.shields.io/github/stars/TYSJY/human-research-scanning-system?style=for-the-badge&logo=github)](https://github.com/TYSJY/human-research-scanning-system/stargazers)
+```
+
+### Release badge
+
+```md
+[![GitHub release](https://img.shields.io/github/v/release/TYSJY/human-research-scanning-system?style=for-the-badge)](https://github.com/TYSJY/human-research-scanning-system/releases)
+```
+
+### Star History chart
+
+```md
+[![Star History Chart](https://api.star-history.com/svg?repos=TYSJY/human-research-scanning-system&type=Date)](https://www.star-history.com/#TYSJY/human-research-scanning-system&Date)
+```
+
+## 如果以后 fork 或重命名仓库
+
+只要把上面 snippet 里的 `TYSJY/human-research-scanning-system` 替换成新的 `<OWNER>/<REPO>` 即可。
+
+## Social preview
+
+仓库已经自带一张适合 GitHub 的社交分享图：
+
+- `.github/assets/social-preview.png`
+
+上传方式：GitHub repository → **Settings** → **Social preview** → Upload image。
 
 ## 重新生成图片
-
-如果你修改了 README 展示内容或者想换一套视觉样式，可以执行：
 
 ```bash
 python scripts/generate_readme_assets.py

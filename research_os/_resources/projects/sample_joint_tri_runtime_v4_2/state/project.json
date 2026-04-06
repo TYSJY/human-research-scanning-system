@@ -67,7 +67,7 @@
     "最接近 baseline 可能已经做过近似思想",
     "联合预算器的收益可能只出现在少数模型/上下文长度"
   ],
-  "version": "0.6.5",
+  "version": "0.6.6",
   "created_at": "2026-03-28T08:48:27",
   "workflow_brief": "通过一个完整示例理解专业科研助手如何围绕 evidence、claim、run、result 和 deliverable 推进研究。"
 }

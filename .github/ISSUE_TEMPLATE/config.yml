@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerabilities
+    url: https://github.com/TYSJY/human-research-scanning-system/security/policy
+    about: Please do not open public issues for security reports.
+  - name: Quickstart guide
+    url: https://github.com/TYSJY/human-research-scanning-system/blob/main/QUICKSTART.md
+    about: Check install and first-run docs before opening a support issue.

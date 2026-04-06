@@ -13,7 +13,6 @@ class ReadmeMediaAssetsTests(unittest.TestCase):
             base / 'docs' / 'assets' / 'showcase-view.png',
             base / 'docs' / 'assets' / 'research-flow.png',
             base / 'docs' / 'assets' / 'evidence-traceability.png',
-            base / 'docs' / 'assets' / 'github-growth-panel.png',
             base / '.github' / 'assets' / 'social-preview.png',
             base / 'docs' / 'maintainers' / 'github_readme_media.md',
             base / 'scripts' / 'generate_readme_assets.py',
@@ -28,7 +27,6 @@ class ReadmeMediaAssetsTests(unittest.TestCase):
             'docs/assets/showcase-view.png',
             'docs/assets/research-flow.png',
             'docs/assets/evidence-traceability.png',
-            'docs/assets/github-growth-panel.png',
             'docs/maintainers/github_readme_media.md',
         ]:
             self.assertIn(rel, readme)

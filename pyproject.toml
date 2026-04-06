@@ -1,6 +1,6 @@
 [project]
 name = "research-os"
-version = "0.6.5"
+version = "0.6.6"
 description = "Professional AI research assistant for literature review, study design, scholarly writing, and reproducible research workflows"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -16,6 +16,13 @@ classifiers = [
   "Topic :: Scientific/Engineering",
   "Topic :: Software Development :: Libraries :: Application Frameworks",
 ]
+
+[project.urls]
+Homepage = "https://github.com/TYSJY/human-research-scanning-system"
+Repository = "https://github.com/TYSJY/human-research-scanning-system"
+Issues = "https://github.com/TYSJY/human-research-scanning-system/issues"
+Documentation = "https://github.com/TYSJY/human-research-scanning-system/tree/main/docs"
+Changelog = "https://github.com/TYSJY/human-research-scanning-system/blob/main/CHANGELOG.md"
 
 [project.scripts]
 ros = "research_os.cli:main"

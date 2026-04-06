@@ -2370,7 +2370,7 @@ body {
   .mission-work-copy h1 { font-size: 40px; }
 }
 
-/* v0.6.5 silent power refinement */
+/* v0.6.6 silent power refinement */
 .quiet-launch-shell {
   background: linear-gradient(180deg, rgba(255,255,255,0.985), rgba(250,248,244,0.97));
   box-shadow: 0 18px 48px rgba(15, 23, 42, 0.05);
@@ -2485,7 +2485,7 @@ body {
   .route-switcher { width: 100%; }
 }
 
-/* v0.6.5 layout polish */
+/* v0.6.6 layout polish */
 .project-home-grid,
 .mission-home-board,
 .quiet-launch-grid {
@@ -2514,7 +2514,7 @@ body {
   }
 }
 
-/* v0.6.5 simplified surface */
+/* v0.6.6 simplified surface */
 :root {
   --bg: #f7f6f3;
   --panel: #ffffff;
@@ -4436,7 +4436,7 @@ def _next_step_flash(project_dir: str, headline: str, extra_lines: list[str] | N
 
 def _make_handler(project_root: str, initial_project: str | None):
     class ResearchOSUIHandler(BaseHTTPRequestHandler):
-        server_version = "ResearchOSUI/0.6.5"
+        server_version = "ResearchOSUI/0.6.6"
 
         def log_message(self, format: str, *args) -> None:  # pragma: no cover - keep terminal clean
             return

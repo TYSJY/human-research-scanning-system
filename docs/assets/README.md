@@ -10,6 +10,12 @@
 - `evidence-traceability.png`
 - `github-growth-panel.png`
 
+## 使用建议
+
+- README 主路径优先使用 **真实 badges + 实时 Star History 图**
+- 本目录里的图片负责承担产品说明、结构解释和视觉识别
+- `.github/assets/social-preview.png` 用于 GitHub repository social preview
+
 ## 生成方式
 
 ```bash

@@ -481,11 +481,11 @@ def generate_github_growth_panel():
     accent_orbs(img)
     draw = ImageDraw.Draw(img)
     draw.text((90, 62), "GitHub launch panel", font=font(48, bold=True), fill=TEXT)
-    draw.text((90, 122), "Use local visuals now. Switch to live badges and star history after the repo is public.", font=font(24), fill=MUTED)
+    draw.text((90, 122), "Keep local visuals for product storytelling, but prefer live badges and star history in the public README.", font=font(24), fill=MUTED)
 
     # badge row
     badges = [
-        ("Stars", "replace <OWNER>/<REPO>", ACCENT),
+        ("Stars", "TYSJY/human-research-scanning-system", ACCENT),
         ("Release", "latest tag badge", ACCENT_2),
         ("Python", "3.11+", ACCENT_3),
         ("License", "MIT", SUCCESS),
@@ -503,8 +503,8 @@ def generate_github_growth_panel():
     chart_box = (90, 286, 1016, 826)
     shadowed_panel(img, chart_box, fill="#0F1E34")
     cx1, cy1, cx2, cy2 = chart_box
-    draw.text((cx1 + 24, cy1 + 18), "Star trend placeholder", font=font(30, bold=True), fill=TEXT)
-    draw.text((cx1 + 24, cy1 + 58), "Swap this panel for a live Star History SVG once the repository is on GitHub.", font=font(18), fill=MUTED)
+    draw.text((cx1 + 24, cy1 + 18), "GitHub repository signals", font=font(30, bold=True), fill=TEXT)
+    draw.text((cx1 + 24, cy1 + 58), "Use this image as a static explainer, but wire the public README to the live Star History SVG.", font=font(18), fill=MUTED)
     plot = (cx1 + 46, cy1 + 118, cx2 - 28, cy2 - 76)
     px1, py1, px2, py2 = plot
     draw.rectangle(plot, outline="#2B3D61", width=2)
@@ -515,7 +515,7 @@ def generate_github_growth_panel():
     for i in range(1, 7):
         x = px1 + i * (px2 - px1) / 7
         draw.line((x, py1, x, py2), fill="#1E3254", width=1)
-    draw.text((px1 + 10, py1 + 10), "Illustrative placeholder only", font=font(18, bold=True), fill=RED)
+    draw.text((px1 + 10, py1 + 10), "Static explainer image", font=font(18, bold=True), fill=RED)
     points = [
         (px1 + 40, py2 - 40),
         (px1 + 160, py2 - 52),
@@ -539,9 +539,9 @@ def generate_github_growth_panel():
     draw.text((sx1 + 24, sy1 + 18), "README launch kit", font=font(30, bold=True), fill=TEXT)
     steps = [
         "1. Keep local screenshots in docs/assets/",
-        "2. Set .github/assets/social-preview.png as repo social preview.",
-        "3. Replace <OWNER>/<REPO> in shields.io badge links.",
-        "4. Add the live Star History SVG snippet after the repo is public.",
+        "2. Set .github/assets/social-preview.png as the repository social preview.",
+        "3. Point badges at TYSJY/human-research-scanning-system (or your forked slug).",
+        "4. Keep the live Star History SVG in the public README.",
         "5. Keep screenshots relative so GitHub renders them reliably.",
     ]
     y = sy1 + 74
@@ -551,10 +551,10 @@ def generate_github_growth_panel():
     draw.text((sx1 + 46, sy2 - 206), "Suggested live snippet", font=font(18, bold=True), fill=ACCENT)
     snippet_lines = [
         "[![GitHub stars](https://img.shields.io/",
-        "github/stars/<OWNER>/<REPO>?style=",
+        "github/stars/TYSJY/human-research-scanning-system?style=",
         "for-the-badge&logo=github)](...) ",
         "[![Star History Chart](https://api.star-history.com/",
-        "svg?repos=<OWNER>/<REPO>&type=Date)](...) ",
+        "svg?repos=TYSJY/human-research-scanning-system&type=Date)](...) ",
     ]
     yy = sy2 - 170
     for line in snippet_lines:

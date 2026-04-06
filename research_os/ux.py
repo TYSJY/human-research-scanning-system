@@ -12,7 +12,7 @@ from .workspace import WorkspaceSnapshot
 
 
 APP_NAME = "Research OS"
-APP_VERSION = "0.6.5"
+APP_VERSION = "0.6.6"
 
 STAGE_SEQUENCE = ["scan", "design", "execute", "write", "audit"]
 STAGE_STATUS_LABELS = {

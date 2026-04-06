@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Research OS"
+type: software
+version: "0.6.6"
+authors:
+  - family-names: "TYSJY"
+url: "https://github.com/TYSJY/human-research-scanning-system"
+repository-code: "https://github.com/TYSJY/human-research-scanning-system"
+license: "MIT"
+abstract: "Professional AI research assistant for literature review, study design, scholarly writing, and reproducible research operations."
+keywords:
+  - research assistant
+  - literature review
+  - study design
+  - scholarly writing
+  - reproducible research
+date-released: 2026-04-06
