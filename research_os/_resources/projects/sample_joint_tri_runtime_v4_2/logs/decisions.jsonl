@@ -1,0 +1,1 @@
+{"timestamp": "2026-03-27T08:22:36", "actor": "migration", "profile": "n/a", "decision": "migrate_v3_to_v4_1", "why": "Unify state, move markdown to notes, create task graph, and prepare executor/runtime integration.", "impact": "V3 stage drift resolved in favor of project_manifest.stage=execute; workflow_state.current_stage=design"}

@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "name": "configs",
+      "status": "ready",
+      "owner": "sample-owner",
+      "notes": "Included in sample package.",
+      "updated_at": "2026-03-28T07:00:00",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    },
+    {
+      "name": "scripts",
+      "status": "ready",
+      "owner": "sample-owner",
+      "notes": "Included in sample package.",
+      "updated_at": "2026-03-28T07:00:00",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    },
+    {
+      "name": "tables",
+      "status": "ready",
+      "owner": "sample-owner",
+      "notes": "Main table matches results registry.",
+      "updated_at": "2026-03-28T07:00:00",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    }
+  ]
+}

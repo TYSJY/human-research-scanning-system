@@ -1,0 +1,67 @@
+{
+  "lifecycle_statuses": [
+    "planned",
+    "queued",
+    "leased",
+    "running",
+    "retryable",
+    "blocked",
+    "succeeded",
+    "failed",
+    "cancelled"
+  ],
+  "approval_statuses": [
+    "not_required",
+    "pending",
+    "requested",
+    "approved",
+    "rejected"
+  ],
+  "schedulable_statuses": [
+    "queued",
+    "retryable"
+  ],
+  "default_worker": {
+    "heartbeat_sec": 2,
+    "lease_ttl_sec": 30,
+    "max_concurrent_runs": 1,
+    "labels": [
+      "local",
+      "shell"
+    ]
+  },
+  "dispatch_rules": {
+    "planned_is_not_runnable": true,
+    "requires_worker_label_match": true,
+    "enforce_depends_on_runs": true,
+    "selector_stop_after_preferred": true
+  },
+  "default_retry_policy": {
+    "max_attempts": 2,
+    "retry_on": [
+      "timeout",
+      "non_zero_exit",
+      "lease_expired",
+      "evaluator_fail"
+    ],
+    "backoff_sec": 5,
+    "fail_on_evaluation_error": true
+  },
+  "selector_defaults": {
+    "min_score_to_promote": 75,
+    "stop_after_preferred": false
+  },
+  "supported_executors": [
+    "manual",
+    "shell",
+    "external"
+  ],
+  "evaluator_defaults": [
+    "metrics_presence",
+    "result_value_presence",
+    "artifact_integrity",
+    "claim_result_consistency",
+    "evidence_coverage",
+    "provenance_completeness"
+  ]
+}

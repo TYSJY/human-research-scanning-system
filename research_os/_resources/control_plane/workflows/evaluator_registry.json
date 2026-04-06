@@ -1,0 +1,34 @@
+{
+  "evaluators": [
+    {
+      "name": "metrics_presence",
+      "scope": "run",
+      "description": "Ensure metrics.json exists and contains a non-empty metrics object."
+    },
+    {
+      "name": "result_value_presence",
+      "scope": "run",
+      "description": "Ensure every register_results value_path resolves from metrics.json."
+    },
+    {
+      "name": "artifact_integrity",
+      "scope": "run",
+      "description": "Ensure expected artifacts are present, hashed, and reflected in output_manifest.json."
+    },
+    {
+      "name": "claim_result_consistency",
+      "scope": "run",
+      "description": "Check acceptance_checks against claim-linked registered results."
+    },
+    {
+      "name": "evidence_coverage",
+      "scope": "run",
+      "description": "Ensure claim-linked evidence coverage meets the configured minimum."
+    },
+    {
+      "name": "provenance_completeness",
+      "scope": "run",
+      "description": "Ensure promoted artifacts and registered results carry enough provenance to audit the run."
+    }
+  ]
+}

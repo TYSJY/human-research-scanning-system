@@ -1,0 +1,38 @@
+[project]
+name = "research-os"
+version = "0.6.5"
+description = "Professional AI research assistant for literature review, study design, scholarly writing, and reproducible research workflows"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["research", "ai", "literature-review", "study-design", "writing", "reproducibility"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+
+[project.scripts]
+ros = "research_os.cli:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["research_os*"]
+
+[tool.setuptools.package-data]
+"research_os._resources" = ["**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

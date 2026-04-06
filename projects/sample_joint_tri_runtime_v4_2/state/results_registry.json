@@ -1,0 +1,58 @@
+{
+  "results": [
+    {
+      "result_id": "R001",
+      "run_id": "20260327_joint-budget-mvp",
+      "claim_id": "C1",
+      "metric": "peak_vram_delta_pct",
+      "value": -18.7,
+      "notes": "vs pipeline-combo",
+      "provenance": {
+        "source": "executor_metrics",
+        "value_path": "metrics.peak_vram_delta_pct",
+        "run_id": "20260327_joint-budget-mvp",
+        "metrics_output": "metrics.json",
+        "metrics_sha256": "cee56d4793418ea2ef7f709cda3b3f570bf67a9f47326b7d9fc9a68ad698742b",
+        "output_manifest_path": "runs/20260327_joint-budget-mvp/output_manifest.json"
+      },
+      "registered_at": "2026-03-28T06:43:21",
+      "validation_status": "pass"
+    },
+    {
+      "result_id": "R002",
+      "run_id": "20260327_joint-budget-mvp",
+      "claim_id": "C1",
+      "metric": "decode_latency_delta_pct",
+      "value": -14.2,
+      "notes": "vs pipeline-combo",
+      "provenance": {
+        "source": "executor_metrics",
+        "value_path": "metrics.decode_latency_delta_pct",
+        "run_id": "20260327_joint-budget-mvp",
+        "metrics_output": "metrics.json",
+        "metrics_sha256": "cee56d4793418ea2ef7f709cda3b3f570bf67a9f47326b7d9fc9a68ad698742b",
+        "output_manifest_path": "runs/20260327_joint-budget-mvp/output_manifest.json"
+      },
+      "registered_at": "2026-03-28T06:43:21",
+      "validation_status": "pass"
+    },
+    {
+      "result_id": "R003",
+      "run_id": "20260327_joint-budget-mvp",
+      "claim_id": "C1",
+      "metric": "accuracy_delta_pct",
+      "value": -0.6,
+      "notes": "vs pipeline-combo",
+      "provenance": {
+        "source": "executor_metrics",
+        "value_path": "metrics.accuracy_delta_pct",
+        "run_id": "20260327_joint-budget-mvp",
+        "metrics_output": "metrics.json",
+        "metrics_sha256": "cee56d4793418ea2ef7f709cda3b3f570bf67a9f47326b7d9fc9a68ad698742b",
+        "output_manifest_path": "runs/20260327_joint-budget-mvp/output_manifest.json"
+      },
+      "registered_at": "2026-03-28T06:43:21",
+      "validation_status": "pass"
+    }
+  ]
+}

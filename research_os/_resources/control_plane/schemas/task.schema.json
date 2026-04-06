@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "task",
+  "type": "object",
+  "required": [
+    "task_id",
+    "title",
+    "stage",
+    "agent",
+    "profile",
+    "priority",
+    "status"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "scan",
+        "design",
+        "execute",
+        "write",
+        "audit"
+      ]
+    },
+    "agent": {
+      "type": "string"
+    },
+    "profile": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "planned",
+        "todo",
+        "in_progress",
+        "blocked",
+        "done",
+        "cancelled"
+      ]
+    }
+  }
+}

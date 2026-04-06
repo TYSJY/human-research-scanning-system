@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run_request",
+  "type": "object",
+  "required": [
+    "executor",
+    "command",
+    "metrics_output",
+    "register_results"
+  ],
+  "properties": {
+    "executor": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "shell",
+        "external"
+      ]
+    },
+    "executor_profile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "command": {
+      "type": [
+        "array",
+        "string"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "env": {
+      "type": "object"
+    },
+    "cwd_mode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timeout_sec": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "lease_ttl_sec": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "heartbeat_sec": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "metrics_output": {
+      "type": "string"
+    },
+    "register_results": {
+      "type": "array"
+    },
+    "expected_artifacts": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "required": [
+              "path"
+            ],
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "promote_to_artifact_registry": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "resource_budget": {
+      "type": "object"
+    },
+    "retry_policy": {
+      "type": "object"
+    },
+    "approval": {
+      "type": "object"
+    },
+    "evaluators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "depends_on_runs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "queue_group": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reasoning_profile": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "worker_requirements": {
+      "type": "object",
+      "properties": {
+        "labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "selector": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string"
+        },
+        "min_score_to_promote": {
+          "type": [
+            "number",
+            "integer"
+          ]
+        },
+        "stop_after_preferred": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "created_from_session_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "tasks": [
+    {
+      "task_id": "scan.baseline_minimum",
+      "title": "建立 baseline 版图",
+      "stage": "scan",
+      "kind": "blueprint",
+      "agent": "scan",
+      "profile": "think",
+      "priority": "P0",
+      "depends_on": [],
+      "requires_gate": null,
+      "closure_rule": "scan_baseline_minimum",
+      "acceptance_notes": "baseline_registry 至少 3 条",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "scan.evidence_minimum",
+      "title": "补齐关键证据条目",
+      "stage": "scan",
+      "kind": "blueprint",
+      "agent": "scan",
+      "profile": "deep_research",
+      "priority": "P0",
+      "depends_on": [],
+      "requires_gate": null,
+      "closure_rule": "scan_evidence_minimum",
+      "acceptance_notes": "evidence_registry 至少 3 条",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "scan.novelty_risk",
+      "title": "补写 novelty 红线与 reviewer 异议",
+      "stage": "scan",
+      "kind": "blueprint",
+      "agent": "scan",
+      "profile": "pro",
+      "priority": "P1",
+      "depends_on": [
+        "scan.evidence_minimum"
+      ],
+      "requires_gate": "track_selected",
+      "closure_rule": "scan_novelty_written",
+      "acceptance_notes": "notes/novelty_audit.md 非占位",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "T001",
+      "title": "确认最接近 baseline 的本质差异",
+      "stage": "design",
+      "kind": "legacy",
+      "agent": "design",
+      "profile": "pro",
+      "priority": "P0",
+      "status": "done",
+      "depends_on": [],
+      "requires_gate": null,
+      "notes": "Sample delivery patched this legacy task to done after preserving the V3 novelty gap in notes/novelty_audit.md.",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "T002",
+      "title": "锁定 MVP 配置并申请 claim_lock",
+      "stage": "design",
+      "kind": "legacy",
+      "agent": "design",
+      "profile": "pro",
+      "priority": "P0",
+      "status": "done",
+      "depends_on": [],
+      "requires_gate": "claim_lock",
+      "notes": "Migrated from V3 backlog: 没有 claim_lock 不应进入 execute",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "design.claim_checks",
+      "title": "为活跃 claim 补齐 acceptance checks 与 evidence coverage",
+      "stage": "design",
+      "kind": "blueprint",
+      "agent": "design",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "design.claim_graph"
+      ],
+      "requires_gate": null,
+      "closure_rule": "design_claim_checks_defined",
+      "acceptance_notes": "每个活跃 claim 都有 evidence_refs 与 acceptance_checks",
+      "status": "todo",
+      "notes": "",
+      "created_at": "2026-03-27T08:24:00",
+      "updated_at": "2026-03-27T08:24:00"
+    },
+    {
+      "task_id": "design.claim_graph",
+      "title": "建立 claim graph",
+      "stage": "design",
+      "kind": "blueprint",
+      "agent": "design",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "scan.evidence_minimum",
+        "scan.baseline_minimum"
+      ],
+      "requires_gate": null,
+      "closure_rule": "design_claim_defined",
+      "acceptance_notes": "claims 至少 1 条",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "design.mvp_lock",
+      "title": "锁定 MVP",
+      "stage": "design",
+      "kind": "blueprint",
+      "agent": "design",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "design.claim_graph"
+      ],
+      "requires_gate": "claim_lock",
+      "closure_rule": "design_mvp_locked",
+      "acceptance_notes": "mvp_name 非占位",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "T003",
+      "title": "创建第一个 MVP run",
+      "stage": "execute",
+      "kind": "legacy",
+      "agent": "execution",
+      "profile": "think",
+      "priority": "P0",
+      "status": "done",
+      "depends_on": [],
+      "requires_gate": null,
+      "notes": "Migrated from V3 backlog: execute 阶段还没有 run",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "T004",
+      "title": "补一个有判别力的结果条目到 results_registry",
+      "stage": "execute",
+      "kind": "legacy",
+      "agent": "execution",
+      "profile": "think",
+      "priority": "P0",
+      "status": "done",
+      "depends_on": [],
+      "requires_gate": null,
+      "notes": "Marked done after shell executor registered R001-R003.",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "execution.first_result",
+      "title": "注册第一批判别性结果",
+      "stage": "execute",
+      "kind": "blueprint",
+      "agent": "execution",
+      "profile": "think",
+      "priority": "P0",
+      "depends_on": [
+        "execution.first_run"
+      ],
+      "requires_gate": null,
+      "closure_rule": "execution_first_result",
+      "acceptance_notes": "results_registry 至少 1 条",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:23:32"
+    },
+    {
+      "task_id": "execution.first_run",
+      "title": "创建并排队第一个 MVP run",
+      "stage": "execute",
+      "kind": "blueprint",
+      "agent": "execution",
+      "profile": "think",
+      "priority": "P0",
+      "depends_on": [
+        "design.claim_graph",
+        "design.mvp_lock"
+      ],
+      "requires_gate": null,
+      "closure_rule": "execution_run_created",
+      "acceptance_notes": "至少 1 个 run manifest",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:22:36"
+    },
+    {
+      "task_id": "execution.runtime_stable",
+      "title": "收敛 runtime backlog 并通过 evaluator",
+      "stage": "execute",
+      "kind": "blueprint",
+      "agent": "execution",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "execution.first_result"
+      ],
+      "requires_gate": null,
+      "closure_rule": "execution_runtime_stable",
+      "acceptance_notes": "无 queued/leased/running/retryable backlog，且成功 run evaluator 为绿",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:24:00",
+      "updated_at": "2026-03-27T08:24:00"
+    },
+    {
+      "task_id": "write.grounded_draft",
+      "title": "把已注册结果回写到摘要和正文骨架",
+      "stage": "write",
+      "kind": "blueprint",
+      "agent": "writing",
+      "profile": "think",
+      "priority": "P0",
+      "depends_on": [
+        "execution.first_result"
+      ],
+      "requires_gate": null,
+      "closure_rule": "write_grounded_draft",
+      "acceptance_notes": "title_abstract 和 outline 非占位且以结果为依据",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:23:59"
+    },
+    {
+      "task_id": "audit.artifact_pack",
+      "title": "补齐产物与复现清单",
+      "stage": "audit",
+      "kind": "blueprint",
+      "agent": "audit",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "write.grounded_draft"
+      ],
+      "requires_gate": "submission_ready",
+      "closure_rule": "audit_artifacts_ready",
+      "acceptance_notes": "artifact_registry 中无 missing 条目",
+      "status": "blocked",
+      "notes": "",
+      "created_at": "2026-03-27T08:22:36",
+      "updated_at": "2026-03-27T08:24:00"
+    },
+    {
+      "task_id": "audit.eval_green",
+      "title": "确认所有关键 run evaluator 为绿",
+      "stage": "audit",
+      "kind": "blueprint",
+      "agent": "audit",
+      "profile": "pro",
+      "priority": "P0",
+      "depends_on": [
+        "audit.artifact_pack"
+      ],
+      "requires_gate": "submission_ready",
+      "closure_rule": "audit_evaluations_green",
+      "acceptance_notes": "没有 run evaluation failure",
+      "status": "done",
+      "notes": "",
+      "created_at": "2026-03-27T08:24:00",
+      "updated_at": "2026-03-27T08:24:00"
+    }
+  ]
+}

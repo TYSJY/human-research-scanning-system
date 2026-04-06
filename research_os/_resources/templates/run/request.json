@@ -1,0 +1,35 @@
+{
+  "executor": "manual",
+  "command": [],
+  "env": {},
+  "cwd_mode": "run_dir",
+  "timeout_sec": 0,
+  "lease_ttl_sec": 30,
+  "heartbeat_sec": 2,
+  "metrics_output": "metrics.json",
+  "register_results": [],
+  "expected_artifacts": [
+    "stdout.log",
+    "stderr.log",
+    "metrics.json"
+  ],
+  "resource_budget": {},
+  "retry_policy": {
+    "max_attempts": 1,
+    "retry_on": [],
+    "backoff_sec": 0,
+    "fail_on_evaluation_error": true
+  },
+  "approval": {
+    "required": false,
+    "reason": "",
+    "risk_tags": []
+  },
+  "evaluators": [
+    "metrics_presence",
+    "result_value_presence",
+    "artifact_integrity",
+    "claim_result_consistency",
+    "evidence_coverage"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "figures": [
+    {
+      "figure_id": "F1",
+      "title": "系统总览图",
+      "status": "planned"
+    },
+    {
+      "figure_id": "F2",
+      "title": "主表：效率-精度权衡",
+      "status": "planned"
+    }
+  ]
+}

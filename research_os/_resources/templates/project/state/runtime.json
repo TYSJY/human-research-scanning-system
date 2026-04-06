@@ -1,0 +1,15 @@
+{
+  "last_agent": null,
+  "last_profile": null,
+  "last_provider": null,
+  "last_summary": null,
+  "last_run_at": null,
+  "last_session_id": null,
+  "last_worker_id": null,
+  "continuations": {},
+  "workloop_runs": 0,
+  "last_plan_hash": null,
+  "scoreboard_refreshed_at": null,
+  "session_sequence": 0,
+  "last_scheduler_summary": {}
+}

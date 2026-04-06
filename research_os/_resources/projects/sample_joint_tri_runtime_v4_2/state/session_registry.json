@@ -1,0 +1,43 @@
+{
+  "sessions": [
+    {
+      "session_id": "S0001",
+      "provider": "mock",
+      "agent": "controller",
+      "profile": "pro",
+      "status": "completed",
+      "started_at": "2026-03-28T06:49:47",
+      "handoff_reason": "stage_ready_to_advance",
+      "current_stage": "audit",
+      "initial_plan_hash": "0da3b0dc96d2594398f0f6baf4832ae96f2ac03e864c415f5c80d5ac922f9a1c",
+      "user_context": {},
+      "provider_meta": {
+        "provider": "mock",
+        "mode": "structured",
+        "generated_at": "2026-03-28T06:49:47",
+        "session_id": "S0002"
+      },
+      "result": {
+        "provider_meta": {
+          "provider": "mock",
+          "mode": "structured",
+          "generated_at": "2026-03-28T06:49:47",
+          "session_id": "S0002"
+        },
+        "apply_change_count": 0,
+        "executor_run_count": 0,
+        "final_stage": "audit",
+        "advance_ready": true
+      },
+      "ended_at": "2026-03-28T06:49:47",
+      "parent_session_id": null,
+      "sequence": 1,
+      "guardrail_status": null,
+      "action_plan_hash": null,
+      "final_plan_hash": null,
+      "tool_call_count": 0,
+      "apply_change_count": 0,
+      "executor_run_count": 0
+    }
+  ]
+}

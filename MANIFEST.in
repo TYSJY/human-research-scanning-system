@@ -1,0 +1,3 @@
+include README.md
+include LICENSE
+recursive-include research_os/_resources *

@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "default_shell": {
+      "env": {},
+      "cwd_mode": "run_dir",
+      "default_timeout_sec": 1800
+    },
+    "gpu_box": {
+      "env": {
+        "CUDA_VISIBLE_DEVICES": "0"
+      },
+      "cwd_mode": "run_dir",
+      "default_timeout_sec": 7200
+    }
+  }
+}

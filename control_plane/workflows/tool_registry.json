@@ -1,0 +1,108 @@
+{
+  "tools": [
+    {
+      "name": "transition_stage",
+      "description": "Advance current stage when exit rules and gates are satisfied.",
+      "arguments": [
+        "stage"
+      ]
+    },
+    {
+      "name": "request_gate",
+      "description": "Mark a human gate as requested.",
+      "arguments": [
+        "gate_id",
+        "reason"
+      ]
+    },
+    {
+      "name": "log_decision",
+      "description": "Append a structured decision log entry.",
+      "arguments": [
+        "decision",
+        "why",
+        "impact"
+      ]
+    },
+    {
+      "name": "register_evidence",
+      "description": "Insert or update an evidence item.",
+      "arguments": [
+        "evidence_id",
+        "title",
+        "kind",
+        "notes",
+        "source_refs"
+      ]
+    },
+    {
+      "name": "register_baseline",
+      "description": "Insert or update a baseline item.",
+      "arguments": [
+        "baseline_id",
+        "name",
+        "kind",
+        "notes"
+      ]
+    },
+    {
+      "name": "register_result",
+      "description": "Insert or update a result item with run provenance.",
+      "arguments": [
+        "result_id",
+        "run_id",
+        "claim_id",
+        "metric",
+        "value",
+        "notes",
+        "provenance"
+      ]
+    },
+    {
+      "name": "register_artifact",
+      "description": "Insert or update an artifact item with provenance and run linkage.",
+      "arguments": [
+        "name",
+        "status",
+        "owner",
+        "kind",
+        "path",
+        "run_id",
+        "notes",
+        "provenance"
+      ]
+    },
+    {
+      "name": "create_run",
+      "description": "Create a run directory plus canonical run_registry entry, approval metadata, retry policy, selector, worker requirements and evaluator config.",
+      "arguments": [
+        "run_id",
+        "manifest",
+        "request",
+        "task_id",
+        "depends_on_runs",
+        "queue_group",
+        "reasoning_profile",
+        "worker_requirements",
+        "selector",
+        "created_from_session_id"
+      ]
+    },
+    {
+      "name": "queue_run",
+      "description": "Queue a run in the canonical run_registry for scheduler-driven worker leasing.",
+      "arguments": [
+        "run_id",
+        "priority"
+      ]
+    },
+    {
+      "name": "update_task",
+      "description": "Patch a task in task_graph.",
+      "arguments": [
+        "task_id",
+        "patch"
+      ]
+    }
+  ]
+}

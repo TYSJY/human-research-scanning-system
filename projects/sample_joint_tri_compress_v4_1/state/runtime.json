@@ -1,0 +1,16 @@
+{
+  "last_agent": "controller",
+  "last_profile": "think",
+  "last_provider": "mock",
+  "last_summary": "Controller routed from task graph and stage exit state.",
+  "last_run_at": "2026-03-27T08:24:00",
+  "previous_response_id_by_agent": {},
+  "workloop_runs": 0,
+  "last_session_id": null,
+  "last_worker_id": null,
+  "last_plan_hash": null,
+  "session_sequence": 0,
+  "continuations": {},
+  "scoreboard_refreshed_at": null,
+  "last_scheduler_summary": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "audit",
+  "default_profile": "pro",
+  "state_write_keys": [
+    "artifact_registry",
+    "task_graph",
+    "runtime",
+    "evaluation_registry"
+  ],
+  "note_write_paths": [
+    "notes/release_checklist.md",
+    "notes/reproducibility_checklist.md",
+    "notes/package_inventory.md"
+  ],
+  "allowed_tools": [
+    "register_artifact",
+    "request_gate",
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [],
+  "prompt_file": "control_plane/prompts/audit_agent.md",
+  "display_name": "Evidence Auditor",
+  "product_role": "Evidence Auditor",
+  "mission": "Audit evidence coverage, reproducibility, and release readiness."
+}

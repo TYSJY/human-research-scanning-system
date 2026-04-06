@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "baseline_id": "B1",
+      "name": "weight-only",
+      "kind": "quantization",
+      "notes": "参数压缩基线"
+    },
+    {
+      "baseline_id": "B2",
+      "name": "WA",
+      "kind": "quantization",
+      "notes": "weight + activation"
+    },
+    {
+      "baseline_id": "B3",
+      "name": "KV-only",
+      "kind": "cache",
+      "notes": "只做 decode 侧优化"
+    },
+    {
+      "baseline_id": "B4",
+      "name": "pipeline-combo",
+      "kind": "composed",
+      "notes": "分离式组合"
+    }
+  ]
+}

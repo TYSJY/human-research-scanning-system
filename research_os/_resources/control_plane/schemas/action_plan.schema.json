@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "research_os_action_plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent",
+    "profile",
+    "summary",
+    "recommendations",
+    "stage_decision",
+    "task_updates",
+    "state_updates",
+    "note_updates",
+    "tool_calls",
+    "requested_gates",
+    "warnings"
+  ],
+  "properties": {
+    "agent": {
+      "type": "string",
+      "enum": [
+        "controller",
+        "scan",
+        "design",
+        "execution",
+        "writing",
+        "audit"
+      ]
+    },
+    "profile": {
+      "type": "string",
+      "enum": [
+        "think",
+        "pro",
+        "deep_research"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "recommendations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stage_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current_stage",
+        "proposed_stage",
+        "advance_ready",
+        "rationale"
+      ],
+      "properties": {
+        "current_stage": {
+          "type": "string",
+          "enum": [
+            "scan",
+            "design",
+            "execute",
+            "write",
+            "audit"
+          ]
+        },
+        "proposed_stage": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "scan",
+            "design",
+            "execute",
+            "write",
+            "audit",
+            null
+          ]
+        },
+        "advance_ready": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "task_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "task_id",
+          "status"
+        ],
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "todo",
+              "in_progress",
+              "blocked",
+              "done",
+              "cancelled"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "patch": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "state_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "state_key",
+          "operation",
+          "payload"
+        ],
+        "properties": {
+          "state_key": {
+            "type": "string",
+            "enum": [
+              "project",
+              "stage_state",
+              "task_graph",
+              "evidence_registry",
+              "baseline_registry",
+              "claims",
+              "mvp",
+              "results_registry",
+              "artifact_registry",
+              "run_registry",
+              "evaluation_registry",
+              "session_registry",
+              "runtime",
+              "figure_plan"
+            ]
+          },
+          "operation": {
+            "type": "string",
+            "enum": [
+              "merge_root",
+              "replace_root",
+              "append_items"
+            ]
+          },
+          "payload": {}
+        }
+      }
+    },
+    "note_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "mode",
+          "content"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "append",
+              "replace",
+              "replace_if_placeholder"
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tool_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "tool",
+          "arguments"
+        ],
+        "properties": {
+          "tool": {
+            "type": "string",
+            "enum": [
+              "transition_stage",
+              "request_gate",
+              "log_decision",
+              "register_evidence",
+              "register_baseline",
+              "register_result",
+              "register_artifact",
+              "create_run",
+              "queue_run",
+              "update_task"
+            ]
+          },
+          "arguments": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "requested_gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gate_id",
+          "reason"
+        ],
+        "properties": {
+          "gate_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "scan",
+  "default_profile": "deep_research",
+  "state_write_keys": [
+    "evidence_registry",
+    "baseline_registry",
+    "task_graph",
+    "runtime"
+  ],
+  "note_write_paths": [
+    "notes/scan.md",
+    "notes/novelty_audit.md",
+    "notes/reviewer_priors.md"
+  ],
+  "allowed_tools": [
+    "register_evidence",
+    "register_baseline",
+    "request_gate",
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [],
+  "prompt_file": "control_plane/prompts/scan_agent.md",
+  "display_name": "Literature Analyst",
+  "product_role": "Literature Analyst",
+  "mission": "Expand evidence coverage, baselines, novelty checks, and reviewer priors."
+}

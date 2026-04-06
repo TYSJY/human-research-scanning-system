@@ -1,0 +1,114 @@
+{
+  "runs": [
+    {
+      "run_id": "20260327_joint-budget-mvp",
+      "status": "succeeded",
+      "priority": "high",
+      "executor": "shell",
+      "created_at": "2026-03-27T08:23:02",
+      "queued_at": "2026-03-27T08:23:02",
+      "started_at": "2026-03-27T08:23:02",
+      "ended_at": "2026-03-28T06:43:21",
+      "attempt_count": 1,
+      "max_attempts": 1,
+      "retry_count": 0,
+      "approval": {
+        "required": false,
+        "status": "not_required",
+        "reason": "",
+        "risk_tags": []
+      },
+      "lease": {},
+      "cancel_requested": false,
+      "last_error": null,
+      "evaluation_status": "pass",
+      "result_ids": [
+        "R001",
+        "R002",
+        "R003"
+      ],
+      "manifest_path": "runs/20260327_joint-budget-mvp/manifest.json",
+      "request_path": "runs/20260327_joint-budget-mvp/request.json",
+      "metrics_path": "runs/20260327_joint-budget-mvp/metrics.json",
+      "output_manifest_path": "runs/20260327_joint-budget-mvp/output_manifest.json",
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "succeeded",
+          "started_at": "2026-03-27T08:23:02",
+          "ended_at": "2026-03-28T06:43:21",
+          "exit_code": 0,
+          "worker_id": null,
+          "error": null
+        }
+      ],
+      "resource_budget": {},
+      "last_evaluated_at": "2026-03-28T09:03:50",
+      "task_id": null,
+      "queue_group": "20260327_joint-budget-mvp",
+      "reasoning_profile": "think",
+      "depends_on_runs": [],
+      "worker_requirements": {
+        "labels": []
+      },
+      "created_by": null,
+      "created_from_session_id": null,
+      "retry_at": null,
+      "cancel_requested_at": null,
+      "blocked_reason": null,
+      "claims_under_test": [
+        "C1"
+      ],
+      "retry_policy": {
+        "max_attempts": 1,
+        "retry_on": [],
+        "backoff_sec": 0,
+        "fail_on_evaluation_error": true
+      },
+      "selector": {
+        "group": "20260327_joint-budget-mvp",
+        "min_score_to_promote": 75,
+        "stop_after_preferred": false
+      },
+      "selection": {
+        "group": "20260327_joint-budget-mvp",
+        "status": "preferred",
+        "score": 100.0,
+        "best_in_group": true,
+        "updated_at": "2026-03-28T09:03:50",
+        "score_breakdown": {
+          "metrics_presence": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 10
+          },
+          "result_value_presence": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 15
+          },
+          "artifact_integrity": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 15
+          },
+          "claim_result_consistency": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 30
+          },
+          "evidence_coverage": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 15
+          },
+          "provenance_completeness": {
+            "status": "pass",
+            "score": 100.0,
+            "weight": 15
+          }
+        }
+      }
+    }
+  ]
+}

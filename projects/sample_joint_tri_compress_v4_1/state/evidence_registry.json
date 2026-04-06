@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "evidence_id": "E1",
+      "title": "近邻工作并未统一建模三种预算",
+      "kind": "literature",
+      "notes": "作为 claim C1 的背景证据"
+    },
+    {
+      "evidence_id": "E2",
+      "title": "pipeline 组合常出现预算错配",
+      "kind": "analysis",
+      "notes": "说明 unified budget 的动机"
+    },
+    {
+      "evidence_id": "E3",
+      "title": "边端推理的主要瓶颈来自参数、prefill、decode 三端不同步",
+      "kind": "system",
+      "notes": "说明问题定义"
+    }
+  ]
+}

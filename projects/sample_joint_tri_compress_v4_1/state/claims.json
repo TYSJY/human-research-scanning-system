@@ -1,0 +1,19 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "统一资源预算驱动的联合压缩，比简单分离式组合更稳地降低峰值显存与端到端时延。",
+      "status": "draft",
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "risk_refs": [
+        "R1"
+      ],
+      "success_metric": "固定精度损失阈值下，峰值显存与端到端时延同时改善"
+    }
+  ],
+  "edges": []
+}

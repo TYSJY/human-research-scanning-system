@@ -1,0 +1,24 @@
+{
+  "name": "writing",
+  "default_profile": "think",
+  "state_write_keys": [
+    "task_graph",
+    "runtime",
+    "figure_plan"
+  ],
+  "note_write_paths": [
+    "notes/title_abstract.md",
+    "notes/outline.md",
+    "notes/rebuttal_notes.md",
+    "notes/contribution_constraints.md"
+  ],
+  "allowed_tools": [
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [],
+  "prompt_file": "control_plane/prompts/writing_agent.md",
+  "display_name": "Scholarly Writer",
+  "product_role": "Scholarly Writer",
+  "mission": "Convert registered results into briefs, abstracts, outlines, and rebuttal notes."
+}

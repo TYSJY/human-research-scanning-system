@@ -1,0 +1,85 @@
+{
+  "evaluations": [
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "metrics_presence",
+      "status": "pass",
+      "summary": "metrics.json contains a non-empty metrics object.",
+      "details": {},
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0001",
+      "score": 100.0,
+      "weight": 10,
+      "checks": []
+    },
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "result_value_presence",
+      "status": "pass",
+      "summary": "All register_results value_path entries resolved from metrics.json.",
+      "details": {},
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0002",
+      "score": 100.0,
+      "weight": 15,
+      "checks": []
+    },
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "artifact_integrity",
+      "status": "pass",
+      "summary": "Expected run artifacts are present and hashed in output_manifest.json.",
+      "details": {},
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0003",
+      "score": 100.0,
+      "weight": 15,
+      "checks": []
+    },
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "claim_result_consistency",
+      "status": "pass",
+      "summary": "All available claim acceptance checks passed for this run.",
+      "details": {
+        "checks_passed": 3,
+        "checks_total": 3
+      },
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0004",
+      "score": 100.0,
+      "weight": 30,
+      "checks": []
+    },
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "evidence_coverage",
+      "status": "pass",
+      "summary": "Claim evidence coverage meets the configured minimum.",
+      "details": {},
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0005",
+      "score": 100.0,
+      "weight": 15,
+      "checks": []
+    },
+    {
+      "target_type": "run",
+      "target_id": "20260327_joint-budget-mvp",
+      "evaluator": "provenance_completeness",
+      "status": "pass",
+      "score": 100.0,
+      "weight": 15,
+      "summary": "All run-linked results have the required provenance fields.",
+      "details": {},
+      "checks": [],
+      "created_at": "2026-03-28T09:03:50",
+      "evaluation_id": "EV0006"
+    }
+  ]
+}

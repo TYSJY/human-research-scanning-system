@@ -1,0 +1,24 @@
+{
+  "name": "execution",
+  "default_profile": "think",
+  "state_write_keys": [
+    "task_graph",
+    "runtime"
+  ],
+  "note_write_paths": [
+    "notes/results_synthesis.md",
+    "runs/*/notes.md"
+  ],
+  "allowed_tools": [
+    "create_run",
+    "queue_run",
+    "register_result",
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [],
+  "prompt_file": "control_plane/prompts/execution_agent.md",
+  "display_name": "Experiment Operator",
+  "product_role": "Experiment Operator",
+  "mission": "Create runs, queue execution, and register provenance-aware results."
+}

@@ -1,0 +1,34 @@
+{
+  "profiles": {
+    "think": {
+      "model": "replace-with-fast-reasoning-model",
+      "mode": "structured",
+      "reasoning_effort": "low",
+      "background": false,
+      "parallel_tool_calls": false,
+      "max_tool_calls": 4,
+      "max_output_tokens": 1800,
+      "use_previous_response_id": false
+    },
+    "pro": {
+      "model": "replace-with-strong-reasoning-model",
+      "mode": "structured",
+      "reasoning_effort": "high",
+      "background": true,
+      "parallel_tool_calls": false,
+      "max_tool_calls": 6,
+      "max_output_tokens": 2600,
+      "use_previous_response_id": false
+    },
+    "deep_research": {
+      "model": "replace-with-research-oriented-model",
+      "mode": "tool_loop",
+      "reasoning_effort": "high",
+      "background": true,
+      "parallel_tool_calls": false,
+      "max_tool_calls": 8,
+      "max_output_tokens": 2600,
+      "use_previous_response_id": false
+    }
+  }
+}

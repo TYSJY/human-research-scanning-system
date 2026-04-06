@@ -1,0 +1,47 @@
+{
+  "project_slug": "replace-me",
+  "title": "replace-me",
+  "owner": "replace-me",
+  "target_venue": "replace-me",
+  "version": "0.5.2",
+  "current_goal": "scan the topic, lock claims, run the MVP, validate claims, then write conservatively",
+  "constraints": {},
+  "budgets": {
+    "max_active_or_queued_runs_without_budget_expand": 2,
+    "token_budget": "replace-me",
+    "compute_budget": "replace-me",
+    "runtime": {
+      "max_concurrent_runs": 1,
+      "lease_ttl_sec": 30,
+      "heartbeat_sec": 2,
+      "default_timeout_sec": 1800,
+      "default_retry_policy": {
+        "max_attempts": 2,
+        "retry_on": [
+          "timeout",
+          "non_zero_exit",
+          "lease_expired",
+          "evaluator_fail"
+        ],
+        "backoff_sec": 5,
+        "fail_on_evaluation_error": true
+      }
+    }
+  },
+  "autonomy_policy": {
+    "level": "supervised",
+    "auto_execute_safe_runs": false,
+    "never_auto_approve": [
+      "claim_lock",
+      "submission_ready",
+      "budget_expand"
+    ]
+  },
+  "reasoning_policy": {
+    "default": "think",
+    "critical": "pro",
+    "deep_research": "deep_research"
+  },
+  "created_at": "2026-03-29T06:32:27",
+  "workflow_brief": "scan the topic, lock claims, run the MVP, validate claims, then write conservatively"
+}

@@ -1,0 +1,10 @@
+{
+  "metrics": {
+    "accuracy": 0.948,
+    "peak_vram_gb": 10.4,
+    "decode_latency_ms": 42.1,
+    "peak_vram_delta_pct": -18.7,
+    "decode_latency_delta_pct": -14.2,
+    "accuracy_delta_pct": -0.6
+  }
+}

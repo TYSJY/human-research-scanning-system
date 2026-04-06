@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "queue_id": "Q001",
+      "run_id": "20260327_joint-budget-mvp",
+      "priority": "high",
+      "status": "done",
+      "requested_by": "migration",
+      "requested_at": "2026-03-27T08:23:02",
+      "started_at": "2026-03-27T08:23:02",
+      "finished_at": "2026-03-27T08:23:04"
+    }
+  ]
+}

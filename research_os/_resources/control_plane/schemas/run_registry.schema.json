@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "run_registry",
+  "type": "object",
+  "required": [
+    "runs"
+  ],
+  "properties": {
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "run_id",
+          "status",
+          "priority",
+          "executor"
+        ],
+        "properties": {
+          "run_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "planned",
+              "queued",
+              "leased",
+              "running",
+              "retryable",
+              "blocked",
+              "succeeded",
+              "failed",
+              "cancelled"
+            ]
+          },
+          "priority": {
+            "type": "string"
+          },
+          "executor": {
+            "type": "string"
+          },
+          "task_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "queue_group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reasoning_profile": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "depends_on_runs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "worker_requirements": {
+            "type": "object"
+          },
+          "approval": {
+            "type": "object"
+          },
+          "lease": {
+            "type": "object"
+          },
+          "attempts": {
+            "type": "array"
+          },
+          "result_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "claims_under_test": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "selector": {
+            "type": "object"
+          },
+          "selection": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

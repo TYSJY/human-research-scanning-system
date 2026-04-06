@@ -1,0 +1,16 @@
+{
+  "last_agent": "controller",
+  "last_profile": "pro",
+  "last_provider": "mock",
+  "last_summary": "Controller routed from task graph, runtime backlog, and stage exit constraints.",
+  "last_run_at": "2026-03-28T06:49:47",
+  "previous_response_id_by_agent": {},
+  "workloop_runs": 0,
+  "continuations": {},
+  "last_session_id": "S0001",
+  "last_worker_id": null,
+  "last_plan_hash": "9c4fb08505f480cb71c2678e5b4116a3da1020650aee7a92409e324b5deb745d",
+  "session_sequence": 1,
+  "scoreboard_refreshed_at": "2026-03-28T09:03:50",
+  "last_scheduler_summary": {}
+}

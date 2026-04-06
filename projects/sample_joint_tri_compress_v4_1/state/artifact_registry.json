@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "name": "configs",
+      "status": "missing",
+      "owner": "sample-owner",
+      "notes": "执行后补",
+      "updated_at": "2026-03-28T10:09:49",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    },
+    {
+      "name": "scripts",
+      "status": "missing",
+      "owner": "sample-owner",
+      "notes": "执行后补",
+      "updated_at": "2026-03-28T10:09:49",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    },
+    {
+      "name": "tables",
+      "status": "partial",
+      "owner": "sample-owner",
+      "notes": "主表待结果回写",
+      "updated_at": "2026-03-28T10:09:49",
+      "path": null,
+      "kind": null,
+      "run_id": null,
+      "provenance": {}
+    }
+  ]
+}

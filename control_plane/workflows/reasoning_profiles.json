@@ -1,0 +1,53 @@
+{
+  "profiles": {
+    "think": {
+      "intent": "fast local iteration, routine planning, execution triage, grounded writing cleanup",
+      "provider_defaults": {
+        "mode": "structured",
+        "reasoning_effort": "low",
+        "background": false,
+        "parallel_tool_calls": false,
+        "max_tool_calls": 4,
+        "max_output_tokens": 1800,
+        "use_previous_response_id": false
+      },
+      "executor_policy": {
+        "auto_execute_safe_runs": true,
+        "human_review_bias": "low"
+      }
+    },
+    "pro": {
+      "intent": "claim shaping, difficult routing, evaluator review, audit and gate-sensitive actions",
+      "provider_defaults": {
+        "mode": "structured",
+        "reasoning_effort": "high",
+        "background": true,
+        "parallel_tool_calls": false,
+        "max_tool_calls": 6,
+        "max_output_tokens": 2600,
+        "use_previous_response_id": false
+      },
+      "executor_policy": {
+        "auto_execute_safe_runs": false,
+        "human_review_bias": "high"
+      }
+    },
+    "deep_research": {
+      "intent": "evidence expansion and synthesis when external scanning is required",
+      "provider_defaults": {
+        "mode": "tool_loop",
+        "reasoning_effort": "high",
+        "background": true,
+        "parallel_tool_calls": false,
+        "max_tool_calls": 8,
+        "max_output_tokens": 2800,
+        "max_tool_rounds": 6,
+        "use_previous_response_id": false
+      },
+      "executor_policy": {
+        "auto_execute_safe_runs": false,
+        "human_review_bias": "medium"
+      }
+    }
+  }
+}

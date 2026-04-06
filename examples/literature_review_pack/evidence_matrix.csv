@@ -1,0 +1,4 @@
+evidence_id,title,kind,key_takeaway,limits
+E001,Example survey on multimodal clinical models,literature,Maps task categories and evaluation settings,No unified explainability benchmark
+E002,Example paper on VLM reliability in radiology,literature,Shows calibration and explanation disagreement,Single modality-heavy setup
+E003,Example position paper on trustworthy medical AI,analysis,Clarifies trust and interpretability are related but not identical,Not specific to multimodal systems

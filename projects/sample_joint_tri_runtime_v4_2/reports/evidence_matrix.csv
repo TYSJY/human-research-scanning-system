@@ -1,0 +1,4 @@
+evidence_id,title,kind,notes,source_refs
+E1,近邻工作并未统一建模三种预算,literature,作为 claim C1 的背景证据,[]
+E2,pipeline 组合常出现预算错配,analysis,说明 unified budget 的动机,[]
+E3,边端推理的主要瓶颈来自参数、prefill、decode 三端不同步,system,说明问题定义,[]

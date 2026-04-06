@@ -1,0 +1,42 @@
+{
+  "current_stage": "audit",
+  "stage_status": {
+    "scan": "done",
+    "design": "done",
+    "execute": "done",
+    "write": "done",
+    "audit": "active"
+  },
+  "gates": [
+    {
+      "gate_id": "track_selected",
+      "title": "Confirm primary research track",
+      "status": "approved",
+      "approved_by": "sample-owner",
+      "approved_at": "2026-03-27T00:00:00"
+    },
+    {
+      "gate_id": "claim_lock",
+      "title": "Lock promoted core claims",
+      "status": "approved",
+      "last_reason": "进入 execute 前需要人工确认主张强度",
+      "requested_at": "2026-03-27T04:08:23",
+      "approved_by": "human",
+      "approved_note": "Accept conservative claim",
+      "approved_at": "2026-03-27T04:09:50"
+    },
+    {
+      "gate_id": "budget_expand",
+      "title": "Approve larger compute or token budget",
+      "status": "pending"
+    },
+    {
+      "gate_id": "submission_ready",
+      "title": "Approve final submission posture",
+      "status": "approved",
+      "approved_by": "sample-maintainer",
+      "approved_at": "2026-03-28T07:00:00",
+      "approved_note": "Sample package finalized for V4.4"
+    }
+  ]
+}

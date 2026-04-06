@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "project_state",
+  "type": "object",
+  "required": [
+    "project_slug",
+    "title",
+    "owner",
+    "target_venue",
+    "current_goal",
+    "constraints",
+    "budgets",
+    "autonomy_policy",
+    "reasoning_policy",
+    "version"
+  ],
+  "properties": {
+    "project_slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "target_venue": {
+      "type": "string"
+    },
+    "current_goal": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "object"
+    },
+    "budgets": {
+      "type": "object"
+    },
+    "autonomy_policy": {
+      "type": "object"
+    },
+    "reasoning_policy": {
+      "type": "object"
+    },
+    "version": {
+      "type": "string"
+    },
+    "workflow_brief": {
+      "type": "string"
+    },
+    "studio": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "session_registry",
+  "type": "object",
+  "required": [
+    "sessions"
+  ],
+  "properties": {
+    "sessions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "session_id",
+          "provider",
+          "agent",
+          "profile",
+          "status",
+          "started_at"
+        ],
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "sequence": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "parent_session_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "provider": {
+            "type": "string"
+          },
+          "agent": {
+            "type": "string"
+          },
+          "profile": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "started_at": {
+            "type": "string"
+          },
+          "ended_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "handoff_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "guardrail_status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "action_plan_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "initial_plan_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "final_plan_hash": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tool_call_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "apply_change_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "executor_run_count": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "provider_meta": {
+            "type": "object"
+          },
+          "result": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

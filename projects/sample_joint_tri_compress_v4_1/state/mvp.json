@@ -1,0 +1,15 @@
+{
+  "mvp_name": "joint-budget-mvp",
+  "question": "统一预算器是否优于 pipeline-combo baseline？",
+  "model": "Qwen2.5-7B-Instruct",
+  "dataset": "LongBench-mini",
+  "success_criteria": [
+    "peak_vram improves",
+    "decode_latency improves",
+    "accuracy drop stays under threshold"
+  ],
+  "fallback_if_fail": [
+    "缩成两元联合压缩",
+    "把贡献降为更稳的预算分配器"
+  ]
+}

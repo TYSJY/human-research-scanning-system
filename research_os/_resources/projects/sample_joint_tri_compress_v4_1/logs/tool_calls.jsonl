@@ -1,0 +1,3 @@
+{"timestamp": "2026-03-27T08:23:02", "tool": "queue_run", "actor": "migration", "profile": "manual", "arguments": {"run_id": "20260327_joint-budget-mvp", "priority": "high"}, "message": "run queued: 20260327_joint-budget-mvp"}
+{"timestamp": "2026-03-27T08:23:59", "tool": "transition_stage", "actor": "controller", "profile": "think", "arguments": {"stage": "write"}, "message": "stage -> write"}
+{"timestamp": "2026-03-27T08:24:00", "tool": "transition_stage", "actor": "controller", "profile": "think", "arguments": {"stage": "audit"}, "message": "stage -> audit"}

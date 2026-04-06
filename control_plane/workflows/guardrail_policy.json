@@ -1,0 +1,51 @@
+{
+  "never_auto_approve_gates": [
+    "claim_lock",
+    "submission_ready",
+    "budget_expand"
+  ],
+  "paper_paths_require_results": [
+    "notes/title_abstract.md",
+    "notes/outline.md"
+  ],
+  "paper_paths_require_green_evaluations": [
+    "notes/title_abstract.md",
+    "notes/outline.md"
+  ],
+  "paper_paths_require_preferred_runs": [
+    "notes/title_abstract.md",
+    "notes/outline.md"
+  ],
+  "max_active_or_queued_runs_without_budget_expand": 2,
+  "require_claim_lock_for_promoted_claims": true,
+  "require_preferred_run_for_promoted_claims": true,
+  "min_run_score_to_promote_claim": 75,
+  "require_run_provenance_for_results": true,
+  "block_stage_transition_without_exit_conditions": true,
+  "protected_state_write_keys": [
+    "run_registry",
+    "results_registry",
+    "evaluation_registry",
+    "session_registry"
+  ],
+  "allow_run_command_as_string": false,
+  "min_evidence_refs_per_claim": 2,
+  "approval_required_timeout_sec": 7200,
+  "approval_required_gpu_hours": 8,
+  "blocked_shell_patterns": [
+    "rm -rf /",
+    "sudo ",
+    "mkfs",
+    "dd if=",
+    ">:"
+  ],
+  "approval_required_shell_patterns": [
+    "curl ",
+    "wget ",
+    "ssh ",
+    "scp ",
+    "rsync ",
+    "pip install ",
+    "apt-get "
+  ]
+}

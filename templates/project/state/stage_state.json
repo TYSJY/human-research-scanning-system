@@ -1,0 +1,32 @@
+{
+  "current_stage": "scan",
+  "stage_status": {
+    "scan": "active",
+    "design": "blocked",
+    "execute": "blocked",
+    "write": "blocked",
+    "audit": "blocked"
+  },
+  "gates": [
+    {
+      "gate_id": "track_selected",
+      "title": "Confirm primary research track",
+      "status": "pending"
+    },
+    {
+      "gate_id": "claim_lock",
+      "title": "Lock promoted core claims",
+      "status": "pending"
+    },
+    {
+      "gate_id": "budget_expand",
+      "title": "Approve larger compute or token budget",
+      "status": "pending"
+    },
+    {
+      "gate_id": "submission_ready",
+      "title": "Approve final submission posture",
+      "status": "pending"
+    }
+  ]
+}

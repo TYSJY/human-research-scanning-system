@@ -1,0 +1,26 @@
+{
+  "name": "design",
+  "default_profile": "pro",
+  "state_write_keys": [
+    "claims",
+    "mvp",
+    "task_graph",
+    "runtime",
+    "figure_plan"
+  ],
+  "note_write_paths": [
+    "notes/claim_evidence_map.md",
+    "notes/experiment_plan.md",
+    "notes/implementation_plan.md"
+  ],
+  "allowed_tools": [
+    "request_gate",
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [],
+  "prompt_file": "control_plane/prompts/design_agent.md",
+  "display_name": "Study Designer",
+  "product_role": "Study Designer",
+  "mission": "Tighten claims, acceptance checks, MVP scope, and experiment planning."
+}

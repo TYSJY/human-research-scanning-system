@@ -1,0 +1,24 @@
+{
+  "run_name": "20260327_joint-budget-mvp",
+  "question": "统一预算器是否优于串接 baseline？",
+  "model": "Qwen2.5-7B-Instruct",
+  "dataset": "LongBench-mini",
+  "baselines": [
+    "weight-only",
+    "WA",
+    "KV-only",
+    "pipeline-combo"
+  ],
+  "metrics": [
+    "accuracy",
+    "peak_vram",
+    "decode_latency"
+  ],
+  "hardware": "single RTX 3090 24GB",
+  "status": "done",
+  "run_id": "20260327_joint-budget-mvp",
+  "started_at": "2026-03-27T08:23:02",
+  "ended_at": "2026-03-27T08:23:04",
+  "exit_code": 0,
+  "notes": "Sample shell executor request generated during V4.1 delivery."
+}

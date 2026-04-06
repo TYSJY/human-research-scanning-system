@@ -1,0 +1,28 @@
+{
+  "name": "controller",
+  "default_profile": "think",
+  "state_write_keys": [
+    "project",
+    "stage_state",
+    "task_graph",
+    "runtime"
+  ],
+  "note_write_paths": [],
+  "allowed_tools": [
+    "transition_stage",
+    "request_gate",
+    "log_decision",
+    "update_task"
+  ],
+  "handoffs": [
+    "scan",
+    "design",
+    "execution",
+    "writing",
+    "audit"
+  ],
+  "prompt_file": "control_plane/prompts/controller_agent.md",
+  "display_name": "Research Lead",
+  "product_role": "Research Lead",
+  "mission": "Coordinate stage decisions, handoffs, and human gates."
+}

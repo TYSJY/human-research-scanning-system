@@ -1,0 +1,112 @@
+{
+  "stages": [
+    {
+      "stage": "scan",
+      "default_agent": "scan",
+      "default_profile": "deep_research",
+      "exit_rules": [
+        "scan_evidence_minimum",
+        "scan_baseline_minimum",
+        "scan_novelty_written"
+      ],
+      "required_gates": [
+        "track_selected"
+      ],
+      "next_stage": "design",
+      "deliverables": [
+        "state/evidence_registry.json",
+        "state/baseline_registry.json",
+        "notes/novelty_audit.md"
+      ]
+    },
+    {
+      "stage": "design",
+      "default_agent": "design",
+      "default_profile": "pro",
+      "exit_rules": [
+        "design_claim_defined",
+        "design_claim_checks_defined",
+        "design_mvp_locked"
+      ],
+      "required_gates": [
+        "claim_lock"
+      ],
+      "next_stage": "execute",
+      "deliverables": [
+        "state/claims.json",
+        "state/mvp.json",
+        "notes/claim_evidence_map.md"
+      ]
+    },
+    {
+      "stage": "execute",
+      "default_agent": "execution",
+      "default_profile": "think",
+      "exit_rules": [
+        "execution_run_created",
+        "execution_first_result",
+        "execution_runtime_stable"
+      ],
+      "required_gates": [],
+      "next_stage": "write",
+      "deliverables": [
+        "state/run_registry.json",
+        "state/results_registry.json",
+        "state/evaluation_registry.json",
+        "runs/"
+      ]
+    },
+    {
+      "stage": "write",
+      "default_agent": "writing",
+      "default_profile": "think",
+      "exit_rules": [
+        "write_grounded_draft"
+      ],
+      "required_gates": [],
+      "next_stage": "audit",
+      "deliverables": [
+        "notes/title_abstract.md",
+        "notes/outline.md",
+        "state/figure_plan.json"
+      ]
+    },
+    {
+      "stage": "audit",
+      "default_agent": "audit",
+      "default_profile": "pro",
+      "exit_rules": [
+        "audit_artifacts_ready",
+        "audit_evaluations_green"
+      ],
+      "required_gates": [
+        "submission_ready"
+      ],
+      "next_stage": null,
+      "deliverables": [
+        "state/artifact_registry.json",
+        "notes/release_checklist.md",
+        "notes/reproducibility_checklist.md",
+        "reports/runtime_audit_report.md"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "track_selected",
+      "title": "Confirm primary research track"
+    },
+    {
+      "gate_id": "claim_lock",
+      "title": "Lock promoted core claims"
+    },
+    {
+      "gate_id": "budget_expand",
+      "title": "Approve larger compute or token budget"
+    },
+    {
+      "gate_id": "submission_ready",
+      "title": "Approve final submission posture"
+    }
+  ]
+}
