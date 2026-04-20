@@ -28,7 +28,7 @@ jobs:
           python -m pip install dist/*.whl
           python -m research_os.cli --help
       - name: Publish GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: |
             dist/*
